@@ -1,3 +1,9 @@
+![Snap1](https://github.com/JayeshTiwari03/Sep-Cards-App/blob/master/src/photos/snap1.png?raw=true)
+
+App is being built 👷‍
+
+Cheers ✌
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
