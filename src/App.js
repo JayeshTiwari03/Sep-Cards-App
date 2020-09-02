@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import FirstCard from './components/cards/FirstCard';
 import Home from './components/home/Home';
 import Navigation from './components/nav/Navigation';
 
@@ -8,6 +9,7 @@ function App() {
     <div>
       <Navigation />
       <Home />
+      <FirstCard />
     </div>
   );
 }
