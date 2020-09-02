@@ -1,6 +1,8 @@
+# Hola, Viewer
+
 ![Snap1](https://github.com/JayeshTiwari03/Sep-Cards-App/blob/master/src/photos/snap1.png?raw=true)
 
-App is being built 👷‍
+### App is being built 👷‍
 
 Next Task will be creating a Footer for UI
 and an additional section with reviews of users
