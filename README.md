@@ -2,6 +2,9 @@
 
 App is being built 👷‍
 
+Next Task will be creating a Footer for UI
+and an additional section with reviews of users
+
 Cheers ✌
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
