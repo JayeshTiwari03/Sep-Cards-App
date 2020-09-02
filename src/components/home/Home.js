@@ -14,7 +14,7 @@ import { GrEmoji } from 'react-icons/gr'
 import { FaBook } from 'react-icons/fa'
 import { BsPersonBoundingBox } from 'react-icons/bs'
 import { SiTwitch } from 'react-icons/si'
-
+import { Link } from 'react-router-dom'
 
 export default function Home() {
     return (
@@ -30,7 +30,9 @@ export default function Home() {
             <div className='card-columns'>
                 <div className='card' id='small-cards'>
                     <div className='card-header text-center'>Featured Misses</div>
+                    <Link to='/firstcard'>
                     <img className='card-img-top' src={cardimagesmall1} alt='card' />
+                    </Link>
                     <div className='card-body'>
                         <h5 className='card-title'><AiFillCamera /> Mis-Movies</h5>
                         <p className='card-text'>Some quick example text to build on the card title and make up the bulk of the card's content.</p>

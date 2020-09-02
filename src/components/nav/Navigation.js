@@ -20,7 +20,7 @@ export default function Navigation() {
                 <div className='navbar-nav'>
                     <a className='nav-item nav-link active' href='/'>Home<span className='sr-only'>(current)</span></a>
                     <a className='nav-items nav-link' href='/'>About Me</a>
-                    <a className='nav-items nav-link disabled' >Dead Zone</a>
+                    <a className='nav-items nav-link disabled' href='/'>Dead Zone</a>
                 </div>
                 <form className='form-inline'>
                     <input className='form-control mr-sm-2' type='search' placeholder='Search' aria-label='Search' />
