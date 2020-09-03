@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext} from 'react'
 //import { AiFillBulb } from 'react-icons/ai'
 import logo from '../../photos/bulb.png'
 import './Navigation.css'
@@ -7,8 +7,12 @@ import {Link} from 'react-router-dom'
 //<span className='navbar-toggler-icon'></span>
 //<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"></button>
 //<div className='collapse navbar-collapse' id='navbarNavAltMarkup'>
-
+import UserContext from '../context/UserContext'
+//TODO Fix Toggle of menu, bootstrap check on website and implement along with LCO video 08
 export default function Navigation() {
+    
+    const context = useContext(UserContext)
+
     return (
         <div>
             <nav className='navbar navbar-dark bg-dark navbar-expand-lg justify-content-between'>
