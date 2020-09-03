@@ -6,6 +6,8 @@ import Navigation from "./components/nav/Navigation";
 import { Switch, Route } from 'react-router-dom';
 import About from './components/about/About';
 import Footers from "./components/footer/Footers";
+import SignUp from "./components/auth/SignUp";
+import SignIn from "./components/auth/SignIn";
 
 function App() {
   return (
@@ -22,6 +24,13 @@ function App() {
         <Route path='/aboutme'>
           <About />
         </Route>
+        <Route path='/signup'>
+          <SignUp />
+        </Route>
+        <Route path='/signin'>
+          <SignIn />
+        </Route>
+
       </Switch>
       
       <Footers />

@@ -1,6 +1,7 @@
 import React from "react";
 import "./About.css";
 import "../home/Home.css";
+import profilepic from '../../photos/profilepic.png';
 
 export default function About() {
   return (
@@ -8,7 +9,7 @@ export default function About() {
       <div className="card-container">
         <img
           className="round"
-          src="https://randomuser.me/api/portraits/women/79.jpg"
+          src={profilepic}
           alt="user"
         />
         <h3>Jayesh Tiwari</h3>
@@ -34,14 +35,15 @@ export default function About() {
       <div className="card-container">
         <img
           className="round"
-          src="https://randomuser.me/api/portraits/women/79.jpg"
+          src={profilepic}
           alt="user"
         />
-        <h3>Jayesh Tiwari</h3>
-        <h6>Indore, India</h6>
+        <h3>...</h3>
+        <h6>...</h6>
         <p>
-          ReactJS Developer and <br></br>
-          UI Designer
+          ...
+          ...<br></br>
+          ...
         </p>
         <div className="buttons">
           <button className="primary">Message Me</button>
@@ -49,13 +51,14 @@ export default function About() {
         <div className="skills">
           <h6>Skills</h6>
           <ul>
-            <li>UI/UX</li>
-            <li>Front End Development</li>
-            <li>HTML</li>
-            <li>CSS</li>
+            <li>...</li>
+            <li>...</li>
+            <li>...</li>
+            <li>...</li>
           </ul>
         </div>
       </div>
+
     </div>
   );
 }

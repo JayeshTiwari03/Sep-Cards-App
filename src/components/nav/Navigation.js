@@ -16,14 +16,13 @@ export default function Navigation() {
                     <img src={logo} width='45px' height='45px' alt='' className="d-inline-block align-top"/>
                     Mismisi
                 </a>
-                <span className='navbar-text'>When you are shaken up, scream 'mismisi'</span>
+                <span className='navbar-text'>When you are shaken up, say 'mismisi'</span>
                 
                 <div className='navbar-nav'>
-                    <Link to='/home' className='nav-item nav-link active' href='/home'>Home<span className='sr-only'>(current)</span>
-                    </Link>
-                    <Link to='/aboutme' className='nav-items nav-link' href='/aboutme'>About Me
-                    </Link>
-                    <a className='nav-items nav-link disabled' href='/'>Dead Zone</a>
+                    <Link to='/home' className='nav-item nav-link' href='/home'>Home<span className='sr-only'>(current)</span></Link>
+                    <Link to='/aboutme' className='nav-items nav-link' href='/aboutme'>About Me</Link>
+                    <Link to='/signup' className='nav-items nav-link' href='/signup'>SignUp</Link>
+                    <Link to='/signin' className='nav-items nav-link' href='/signin'>SignIn</Link>
                 </div>
                 <form className='form-inline'>
                     <input className='form-control mr-sm-2' type='search' placeholder='Search' aria-label='Search' />
