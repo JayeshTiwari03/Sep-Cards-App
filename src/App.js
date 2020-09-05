@@ -10,14 +10,27 @@ import SignUp from "./components/auth/SignUp";
 import SignIn from "./components/auth/SignIn";
 import PageNotFound from "./components/auth/PageNotFound";
 import UserContext from './components/context/UserContext';
+//import { SiFirebase } from "react-icons/si";
+//import AppWrapper from "./components/nav/Navigation";
+//init firebase
+import firebase from 'firebase/app';
+import 'firebase/auth';
 
-function App() {
+import firebaseConfig from './components/config/FirebaseConfig';
+
+firebase.initializeApp(firebaseConfig);
+
+const App = () => {
+
   const [user, setUser] = useState(null);
 
   return (
     <div>
+ 
       <Navigation />
+
       <UserContext.Provider value={{user, setUser}}>
+
       <Switch>
         <Route path="/home">
           <Home />
