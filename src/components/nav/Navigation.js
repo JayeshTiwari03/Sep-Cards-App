@@ -32,9 +32,13 @@ function Navigation() {
         <span className="navbar-text">
           When you are shaken up, say 'mismisi'
         </span>
-        <span className="navbar-text">
-          Hi, {context.user?.email ? context.user.email : 'Guest'}
-        </span>
+        <p className="navbar-text">
+
+          Hi, {
+                context.user?.email ? context.user.email : 'Guest'
+              }
+
+        </p>
         <div className="navbar-nav">
           <Link to="/home" className="nav-item nav-link" href="/home">
             Home<span className="sr-only">(current)</span>
@@ -45,11 +49,10 @@ function Navigation() {
 
           {
             context.user ? (
-          
-              <Link to="/logout" className="nav-items nav-link" href="/logout">
-                LogOut
-              </Link>
-            
+          <>
+              
+              <a href='/home' onClick={() => {context.setUser(null)}} className="nav-items nav-link">Log Out</a>
+            </>
           ) : (
             <>
               <Link to="/signup" className="nav-items nav-link" href="/signup">
