@@ -4,13 +4,15 @@ import UserContext from "../context/UserContext";
 import "./main.css";
 import firebase from "firebase/app";
 import { Redirect } from "react-router-dom";
+import { toast } from "react-toastify";
+
 const SignIn = () => {
   const context = useContext(UserContext);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSignIn = () => {
+  const handleSignUp = () => {
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
@@ -20,12 +22,15 @@ const SignIn = () => {
       })
       .catch((error) => {
         console.log(error);
+        toast(error.message, {
+          type: 'error'
+        })
       });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    handleSignIn();
+    handleSignUp();
   };
 
   if (context.user?.uid) {
@@ -34,10 +39,7 @@ const SignIn = () => {
 
   return (
     <div className="contain">
-      <form 
-        className="form-signin"
-        onClick={handleSubmit}
-        >
+      <form className="form-signin" onSubmit={handleSubmit}>
         <img
           className="mb-4"
           src={logo}
@@ -55,7 +57,7 @@ const SignIn = () => {
           id="inputEmail"
           placeholder="Email Address"
           value={email}
-          onChange={e => setEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
           required
           autoFocus
         />
@@ -67,8 +69,8 @@ const SignIn = () => {
           className="form-control"
           id="inputPassword"
           placeholder="Password"
-          onChange={(e) => setPassword(e.target.value)}
           value={password}
+          onChange={(e) => setPassword(e.target.value)}
           required
         />
 

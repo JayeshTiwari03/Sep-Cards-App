@@ -4,6 +4,7 @@ import logo from "../../photos/bulb.png";
 import firebase from "firebase/app";
 import UserContext from "../context/UserContext";
 import { Redirect } from "react-router-dom"; //to redirect to home page
+import { toast } from "react-toastify";
 
 const SignUp = () => {
   const context = useContext(UserContext);
@@ -21,6 +22,9 @@ const SignUp = () => {
       })
       .catch((error) => {
         console.log(error);
+        toast(error.message, {
+          type: 'error'
+        })
       });
   };
 

@@ -10,9 +10,7 @@ import UserContext from "../context/UserContext";
 //import App from "../../App";
 //TODO Fix Toggle of menu, bootstrap check on website and implement along with LCO video 08
 
-
 function Navigation() {
-
   const context = useContext(UserContext);
 
   return (
@@ -32,13 +30,9 @@ function Navigation() {
         <span className="navbar-text">
           When you are shaken up, say 'mismisi'
         </span>
-        <p className="navbar-text">
-
-          Hi, {
-                context.user?.email ? context.user.email : 'Guest'
-              }
-
-        </p>
+        <span className="navbar-text text-light">
+          Hi, {context.user?.email ? context.user.email : "Guest"}
+        </span>
         <div className="navbar-nav">
           <Link to="/home" className="nav-item nav-link" href="/home">
             Home<span className="sr-only">(current)</span>
@@ -46,12 +40,17 @@ function Navigation() {
           <Link to="/aboutme" className="nav-items nav-link" href="/aboutme">
             About Me
           </Link>
-
-          {
-            context.user ? (
-          <>
-              
-              <a href='/home' onClick={() => {context.setUser(null)}} className="nav-items nav-link">Log Out</a>
+          {context.user ? (
+            <>
+              <a
+                href="/home"
+                onClick={() => {
+                  context.setUser(null);
+                }}
+                className="nav-items nav-link"
+              >
+                Log Out
+              </a>
             </>
           ) : (
             <>
@@ -62,9 +61,7 @@ function Navigation() {
                 SignIn
               </Link>
             </>
-          )
-          }
-
+          )}
         </div>
         <form className="form-inline">
           <input
