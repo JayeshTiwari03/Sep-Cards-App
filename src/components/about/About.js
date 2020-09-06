@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import "../home/Home.css";
+import "../home/Home.scss";
 import profilepic from '../../photos/profilepic.png';
 
 export default function About() {

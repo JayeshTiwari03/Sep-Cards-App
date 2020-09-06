@@ -1,5 +1,5 @@
 import React from 'react'
-import './Home.css'
+import './Home.scss'
 import cardimage from '../../photos/bigcardimage.jpg'
 import cardimagesmall1 from '../../photos/images2.jpg'
 import cardimagesmall2 from '../../photos/suitcase.jpg'
@@ -19,6 +19,7 @@ import { Link } from 'react-router-dom'
 export default function Home() {
     return (
         <div>
+            
             <div className='card bg-dark' id='big-card'>
             <div className='card-img' src={cardimage} alt='card' />
                 <div className='card-img-overlay text-light'>
@@ -86,6 +87,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+            
         </div>
     )
 }

@@ -1,0 +1,47 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+
+.card {
+    width: 18rem;
+    margin: 10px 0 10px 10px;
+}
+
+.card-title {
+    font-size: 24px;
+}
+
+#big-card {
+    width: auto;
+    height: 300px;
+}
+
+.card-img {
+    height: 300px;
+    width: 100%;
+    opacity: 10;
+}
+
+.card-img-overlay {
+    opacity: 10;
+}
+
+.card-columns {
+    @include media-breakpoint-only(lg) {
+        column-count: 3;
+    }
+    @include media-breakpoint-only(md) {
+        column-count: 2;
+    }
+    @include media-breakpoint-only(sm) {
+        column-count: 1;
+    }
+    @include media-breakpoint-only(xs) {
+        column-count: 1;
+    }
+}
+
+@media(min-width:576px){}
+@media(min-width:768px){}
+@media(min-width:992px){}
+@media(min-width:1200px){}
