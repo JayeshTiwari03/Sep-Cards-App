@@ -18,7 +18,7 @@ import { Link } from 'react-router-dom'
 
 export default function Home() {
     return (
-        <div>
+        <div className='card-page'>
             
             <div className='card bg-dark' id='big-card'>
             <div className='card-img' src={cardimage} alt='card' />
@@ -87,7 +87,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            
+                    
         </div>
     )
 }

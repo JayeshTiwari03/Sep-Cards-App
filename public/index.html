@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-31457019-2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-31457019-2");
+    </script>
+
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -17,7 +32,7 @@
       crossorigin="anonymous"
     />
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
 
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -53,8 +68,8 @@
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-     <script src="/__/firebase/7.19.1/firebase-auth.js"></script>
-     
+    <script src="/__/firebase/7.19.1/firebase-auth.js"></script>
+
     <!-- Initialize Firebase -->
     <script src="/__/firebase/init.js"></script>
   </body>
