@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import "./GitUsers.css";
 //add error loading
 
-const GitUsers = () => {
+export default function GitUsers() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("https://api.github.com/users/?results=3")
+    fetch("https://api.github.com/users/JayeshTiwari03")
       .then((response) => response.json())
       .then(
         (data) => {
@@ -39,4 +39,3 @@ const GitUsers = () => {
     );
   }
 };
-export default GitUsers;
