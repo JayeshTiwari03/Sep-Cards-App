@@ -1,25 +1,42 @@
-import React, {useState, useEffect} from 'react'
-import './GitUsers.css'
+import React, { useState, useEffect } from "react";
+import "./GitUsers.css";
+//add error loading
 
 const GitUsers = () => {
+  const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-    const [user, setUser] = useState([])
+  useEffect(() => {
+    fetch("https://api.github.com/users/?results=3")
+      .then((response) => response.json())
+      .then(
+        (data) => {
+          setUsers(data.users);
+          setLoading(true);
+        },
+        (error) => {
+          setLoading(true);
+          setError(error);
+        }
+      );
+  }, []);
 
-    useEffect(() => {
-        fetch('')
-        .then(response => response.json())
-        .then(response => {
-            user: user.response
-        }, [])
-    }
-
+  if (error) {
+    return <h5>There was some error, try again</h5>;
+  } else if (!loading) {
+    return <p>loading...please wait</p>;
+  } else {
     return (
-        <div className='container'>
-            <div className='cards-column'>
-                <p>this place will display results</p>
-            </div>
-        </div>
-    )
-}
-
-export default GitUsers
+        <div>
+        {users.map((user) => (
+          <div key={user.id}>
+            <h3>Phone number{user.email}</h3>
+            <h2>{user.bio}</h2>
+          </div>
+        ))}
+      </div>
+    );
+  }
+};
+export default GitUsers;
