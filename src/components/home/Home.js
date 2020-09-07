@@ -30,7 +30,7 @@ export default function Home() {
             </div>
             <div className='card-columns'>
                 <div className='card' id='small-cards'>
-                <Link to='/firstcard1'>
+                <Link to='/gitusers'>
                     <div className='card-header text-center'>Featured Misses</div>
                     
                     <img className='card-img-top' src={cardimagesmall1} alt='card' />

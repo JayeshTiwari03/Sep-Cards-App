@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import FirstCard from "./components/cards/FirstCard";
+//import FirstCard from "./components/cards/FirstCard";
 import Home from "./components/home/Home";
 import Navigation from "./components/nav/Navigation";
 import { Switch, Route } from "react-router-dom";
@@ -17,6 +17,7 @@ import firebase from "firebase/app";
 import "firebase/auth";
 
 import firebaseConfig from "./components/config/firebaseConfig";
+import GitUsers from "./components/cards/GitUsers";
 
 firebase.initializeApp(firebaseConfig);
 
@@ -25,16 +26,14 @@ const App = () => {
 
   return (
     <div>
-
       <UserContext.Provider value={{ user, setUser }}>
-      <Navigation />
+        <Navigation />
         <Switch>
-
           <Route path="/home">
             <Home />
           </Route>
-          <Route path="/firstcard1">
-            <FirstCard />
+          <Route path="/gitusers">
+            <GitUsers />
           </Route>
           <Route path="/aboutme">
             <About />
