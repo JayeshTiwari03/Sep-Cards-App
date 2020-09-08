@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from "react";
-import "./GitUsers.css";
-//add error loading
+import "./GitUsers.scss";
 
-export default function GitUsers() {
+const GitUsers = () => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("https://api.github.com/users/JayeshTiwari03")
+    fetch("https://api.github.com/users")
       .then((response) => response.json())
       .then(
         (data) => {
-          setUsers(data.users);
+          setUsers(data);
           setLoading(true);
         },
         (error) => {
@@ -28,14 +27,24 @@ export default function GitUsers() {
     return <p>loading...please wait</p>;
   } else {
     return (
-        <div>
+      <div className="card-columns" id='card-column'>
+        
         {users.map((user) => (
           <div key={user.id}>
-            <h3>Phone number{user.email}</h3>
-            <h2>{user.bio}</h2>
-          </div>
+            <div className="card" id='userpage'>
+              <img className="card-img-top" id="cardimage" src={user.avatar_url} alt="user1" />
+                <div className="card-body">
+                  <h5 className="card-title">{user.login}</h5>
+                  <p className="card-text">{user.url}</p>
+                  <a href={user.repos_url} className="btn btn-primary">
+                    See Repos
+                  </a>
+                </div>
+              </div>
+            </div>
         ))}
       </div>
     );
   }
 };
+export default GitUsers;
