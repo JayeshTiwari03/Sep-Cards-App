@@ -29,7 +29,7 @@ export default function Home() {
           To get started, you can Sign Up or browse the app without signing In
           too.
         </p>
-        <p classname="lead">
+        <p className="lead">
           <a className="btn btn-primary btn-lg" href="/signup" role="button">
             Sign Up here
           </a>
@@ -55,7 +55,7 @@ export default function Home() {
         </div>
         <div className="card" id="small-cards">
           <div className="card-header text-center">Featured Misses</div>
-          <Link to='/searchusers'>
+          <Link to='/searchsome'>
           <img className="card-img-top" src={cardimagesmall2} alt="card" />
           </Link>
           <div className="card-body">

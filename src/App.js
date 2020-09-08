@@ -18,7 +18,8 @@ import "firebase/auth";
 
 import firebaseConfig from "./components/config/firebaseConfig";
 import GitUsers from "./components/cards/GitUsers";
-import GitUsersSearch from "./components/cards/GitUsersSearch";
+//import GitUsersSearch from "./components/cards/GitUsersSearch";
+import Search from "./components/cards/Search";
 
 firebase.initializeApp(firebaseConfig);
 
@@ -36,9 +37,10 @@ const App = () => {
           <Route path="/gitusers">
             <GitUsers />
           </Route>
-          <Route path="/searchusers">
-            <GitUsersSearch />
+          <Route path="/searchsome">
+            <Search />
           </Route>
+          
           <Route path="/aboutme">
             <About />
           </Route>
