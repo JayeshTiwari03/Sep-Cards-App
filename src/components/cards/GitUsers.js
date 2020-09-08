@@ -27,21 +27,25 @@ const GitUsers = () => {
     return <p>loading...please wait</p>;
   } else {
     return (
-      <div className="card-columns" id='card-column'>
-        
+      <div className="card-columns" id="card-column">
         {users.map((user) => (
           <div key={user.id}>
-            <div className="card" id='userpage'>
-              <img className="card-img-top" id="cardimage" src={user.avatar_url} alt="user1" />
-                <div className="card-body">
-                  <h5 className="card-title">{user.login}</h5>
-                  <p className="card-text">{user.url}</p>
-                  <a href={user.repos_url} className="btn btn-primary">
-                    See Repos
-                  </a>
-                </div>
+            <div className="card" id="userpage">
+              <img
+                className="card-img-top"
+                id="cardimage"
+                src={user.avatar_url}
+                alt="user1"
+              />
+              <div className="card-body">
+                <h5 className="card-title">{user.login}</h5>
+                <p className="card-text">{user.url}</p>
+                <a href={user.repos_url} className="btn btn-primary">
+                  See Repos
+                </a>
               </div>
             </div>
+          </div>
         ))}
       </div>
     );
