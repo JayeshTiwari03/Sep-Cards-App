@@ -37,9 +37,7 @@ function Navigation() {
           <Link to="/home" className="nav-item nav-link" href="/home">
             Home<span className="sr-only">(current)</span>
           </Link>
-          <Link to="/aboutme" className="nav-items nav-link" href="/aboutme">
-            About Me
-          </Link>
+
           {context.user ? (
             <>
               <a

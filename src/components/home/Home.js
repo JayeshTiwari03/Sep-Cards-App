@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.scss";
-//import cardimage from "../../photos/bigcardimage.jpg";
+
 import cardimagesmall1 from "../../photos/images2.jpg";
 import cardimagesmall2 from "../../photos/suitcase.jpg";
 import cardimagesmall3 from "../../photos/packing.jpg";
@@ -35,11 +35,11 @@ export default function Home() {
           </a>
         </p>
       </div>
+
       <div className="card-columns">
         <div className="card" id="small-cards">
-          
-            <div className="card-header text-center">Featured Misses</div>
-            <Link to="/gitusers">
+          <div className="card-header text-center">Featured Misses</div>
+          <Link to="/gitusers">
             <img className="card-img-top" src={cardimagesmall1} alt="card" />
           </Link>
           <div className="card-body">
@@ -50,24 +50,9 @@ export default function Home() {
               See lots of GitHub users displayed in cards. See your favorite
               users in this Mis and keep rocking.
             </p>
-            
           </div>
         </div>
-        <div className="card" id="small-cards">
-          <div className="card-header text-center">Featured Misses</div>
-          <Link to='/searchsome'>
-          <img className="card-img-top" src={cardimagesmall2} alt="card" />
-          </Link>
-          <div className="card-body">
-            <h5 className="card-title">
-              <FiCloudRain /> User Search
-            </h5>
-            <p className="card-text">
-              Search your favorite GitHub user in this miss. Click on this and start hitting that Search button!
-            </p>
-            
-          </div>
-        </div>
+
         <div className="card" id="small-cards">
           <div className="card-header text-center">Featured Misses</div>
           <img className="card-img-top" src={cardimagesmall3} alt="card" />
@@ -79,11 +64,25 @@ export default function Home() {
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </p>
-            <a href="/" className="btn btn-primary">
-              Let's Roll
-            </a>
           </div>
         </div>
+
+        <div className="card" id="small-cards">
+          <div className="card-header text-center">Featured Misses</div>
+          <Link to="/searchsome">
+            <img className="card-img-top" src={cardimagesmall2} alt="card" />
+          </Link>
+          <div className="card-body">
+            <h5 className="card-title">
+              <FiCloudRain /> User Search
+            </h5>
+            <p className="card-text">
+              Search your favorite GitHub user in this miss. Click on this and
+              start hitting that Search button!
+            </p>
+          </div>
+        </div>
+
         <div className="card" id="small-cards">
           <div className="card-header text-center">Premium Misses</div>
           <img className="card-img-top" src={cardimagesmall4} alt="card" />
@@ -95,27 +94,25 @@ export default function Home() {
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </p>
-            <a href="/" className="btn btn-primary">
-              Let's Roll
-            </a>
           </div>
         </div>
+
         <div className="card" id="small-cards">
-          <div className="card-header text-center">Premium Misses</div>
-          <img className="card-img-top" src={cardimagesmall5} alt="card" />
+          <div className="card-header text-center">Featured Misses</div>
+          <Link to="/movies">
+            <img className="card-img-top" src={cardimagesmall5} alt="card" />
+          </Link>
           <div className="card-body">
             <h5 className="card-title">
-              <BsPersonBoundingBox /> Mis-Users
+              <BsPersonBoundingBox /> Movies Search
             </h5>
             <p className="card-text">
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </p>
-            <a href="/" className="btn btn-primary">
-              Let's Roll
-            </a>
           </div>
         </div>
+
         <div className="card" id="small-cards">
           <div className="card-header text-center">Premium Misses</div>
           <img className="card-img-top" src={cardimagesmall6} alt="card" />
@@ -127,9 +124,6 @@ export default function Home() {
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </p>
-            <a href="/" className="btn btn-primary">
-              Let's Roll
-            </a>
           </div>
         </div>
       </div>
