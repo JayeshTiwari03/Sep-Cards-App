@@ -2,8 +2,7 @@
 
 ![Snap1](https://github.com/JayeshTiwari03/Sep-Cards-App/blob/master/src/photos/snap1.png?raw=true)
 
-Hosting URl here - (TBA)
-### App is being built 👷‍
+Hosting URl here - https://mismisi-firebase-app.web.app/
 
 Cheers ✌
 
